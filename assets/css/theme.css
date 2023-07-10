@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+section#start {
+	padding:100px 0;
+	min-height: 100vh;
+}
+section, footer {
+	padding: 100px 0;
+}
+.text-justify {
+	text-align: justify;
+}
+
+.clip-1 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	clip-path: polygon(50% 0%, 26% 42%, 92% 91%);
+	background: var(--bs-danger);
+}
+
+.clip-2 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	clip-path: polygon(40% 18%, 86% 22%, 16% 73%);
+	background: var(--bs-danger);
+}
