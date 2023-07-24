@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WHISTLEBLOWING SYSTEM DPMPTSP</title>
+	<link rel="stylesheet" href="assets/css/bootstrap-custom.css">
+	<link rel="stylesheet" href="assets/css/theme.css">
+	<!-- icons -->
+	<link rel="stylesheet" href="assets/vendors/uicons-thin-straight/css/uicons-thin-straight.css">
+	<link rel="stylesheet" href="assets/vendors/icons-1.10.5/font/bootstrap-icons.min.css">
+</head>
+<body>
+	<header id="navbar_top">
+		<nav class="navbar navbar-expand-lg bg-white">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><span class="text-danger">WBS</span> DPMPTSP</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">BERANDA</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								PENGADUAN
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="kirim-pengaduan.html">TULIS PENGADUAN</a></li>
+								<li><a class="dropdown-item" href="pantau-pengaduan.html">PANTAU PENGADUAN</a></li>
+								<li><a class="dropdown-item" href="grafik-pengaduan.html">GRAFIK PENGADUAN</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="tentang.html">TENTANG WBS</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								BANTUAN
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="alur-pengaduan.html">ALUR PENGADUAN</a></li>
+								<li><a class="dropdown-item" href="cara-pengaduan.html">CARA MENGAJUKAN PENGADUAN</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+								<li><a class="dropdown-item" href="kontak.html">HUBUNGI KAMI</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<!-- <a class="nav-link" href="#">LOGIN</a> -->
+							<a class="btn btn-outline-danger" href="login.html">LOGIN</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="container">
+			<h1 class="d-1 text-center">KIRIM PENGADUAN</h1>
+			<p class="text-secondary text-center">
+				Anda melihat atau mengetahui dugaan Tindak Pidana Korupsi yang dilakukan pegawai LKPP. Silahkan melapor ke Inspektorat LKPP. Jika laporan anda memenuhi syarat/kriteria, maka akan diproses lebih lanjut.
+			</p>
+		</div>
+	</section>
+	<section class="py-5">
+		<div class="container">
+			<div class="alert alert-info mb-5">
+				<h4 class="alert-heading"><i class="bi bi-info-circle"></i> Silahkan baca informasi berikut terlebih dahulu !</h4>
+				<ul>
+					<li>Pada bagian <b>"Data Pribadi"</b> diisi dengan data yang tidak melekat langsung pada diri Anda (pergunakan data <b>samaran</b>).</li>
+					<li>Setelah Anda berhasil mengirim pengaduan, maka secara otomatis Anda <b>memiliki akun</b> di aplikasi WBS dan mendapat <b>kode unik</b> untuk pengaduan Anda.</li>
+				</ul>
+			</div>
+			<form action="javascript:kirim_pengaduan()" method="post" enctype="multipart/form-data" id="FormPengaduan" class="needs-validation" novalidate>
+				<div class="card shadow mb-4">
+					<div class="card-header">Data Pribadi</div>
+					<div class="card-body">	
+						<div class="mb-3 has-validation">
+							<label for="nama" class="form-label">Nama Samaran *</label>
+							<input type="text" class="form-control" id="nama" placeholder="Masukkan nama yang unik" required>
+							<div class="invalid-feedback"></div>
+						</div>
+						<div class="mb-3 has-validation">
+							<label for="what" class="form-label">Jenis Pelanggaran *</label>
+							<select name="what" id="what" class="form-control" required>
+								<option disabled>-- Pilih Jenis Pelanggaran --</option>
+								<option value="1">Penyimpangan dari tugas dan fungsi</option>
+								<option value="2">Benturan kepentingan</option>
+								<option value="3">Gratifikasi</option>
+								<option value="4">Melanggar peraturan dan perundangan yang berlaku</option>
+								<option value="5">Tindak Pidana Korupsi</option>
+							</select>
+							<div class="invalid-feedback"></div>
+						</div>
+						<div class="mb-3 has-validation">
+							<label for="who" class="form-label">Nama Terlapor *</label>
+							<input type="text" class="form-control" id="who" name="who" placeholder="Masukkan nama yang dilaporkan (boleh lebih dari satu nama)" required>
+							<div class="invalid-feedback"></div>
+
+						</div>
+						<div class="mb-3 has-validation">
+							<label for="where" class="form-label">Lokasi Kejadian *</label>
+							<textarea name="where" id="where" cols="30" rows="4" class="form-control" placeholder="Jelaskan detail lokasi kejadian" onresize="vertical" required></textarea>
+							<div class="invalid-feedback"></div>
+
+						</div>
+						<div class="mb-3 has-validation">
+							<label for="when" class="form-label">Waktu Kejadian *</label>
+							<input type="date" class="form-control" id="when" name="when" placeholder="Masukkan nama yang dilaporkan (boleh lebih dari satu nama)" required>
+							<div class="invalid-feedback"></div>
+
+						</div>
+						<div class="mb-3 has-validation">
+							<label for="how" class="form-label">Detail Kejadian *</label>
+							<textarea name="how" id="how" cols="30" rows="10" class="form-control" placeholder="Jelaskan detail terjadinya pelanggaran" onresize="vertical" required></textarea>
+							<div class="invalid-feedback"></div>
+						</div>
+						<div class="mb-3 has-validation">
+							<label for="evidence" class="form-label">Lampiran *</label>
+							<input name="evidence" class="form-control" type="file" id="evidence" multiple required>
+						</div>
+						<div class="alert alert-warning">
+							<h6>CATATAN:</h6>
+							<p>Maksimal kapasitas file yang diperkenankan adalah sebesar 10MB dan tipe/format file yang diizinkan adalah .ZIP, .RAR, .DOC, .DOCX, .XLS, .XLSX, .PPT, .PPTX, .PDF, .JPG, .JPEG, .PNG, .AVI, .MP4, .3GP, .MP3</p>
+						</div>
+						<div class="mb-3">
+							<button type="submit" id="submit" class="btn btn-primary">Kirim Pengaduan</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer class="bg-dark text-white pb-3">
+		<div class="container">
+			<div class="col-md-6">
+				<h4 class="mb-5"><span class="text-danger">WHISTLEBLOWING</span> SYSTEM <br>INTERNAL DPMPTSP</h4>
+				<p>Dinas Penanaman Modal Dan Pelayanan Terpadu Satu Pintu Kota Pekalongan (DPMPTSP) <br>
+					<small>Jl. Jaksa Agung R. Soeprapto No. 1 Podosugih, Pekalongan Barat, Kota Pekalongan, Jawa Tengah</small>
+				</p>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<small class="text-secondary">Hak cipta © 2023 DPMPTSP Kota Pekalongan - All Rights Reserved</small>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex justify-content-md-end">
+						<a href="" class="text-white m-2"><i class="bi bi-facebook"></i></a>
+						<a href="" class="text-white m-2"><i class="bi bi-youtube"></i></a>
+						<a href="" class="text-white m-2"><i class="bi bi-twitter"></i></a>
+						<a href="" class="text-white m-2"><i class="bi bi-instagram"></i></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/scroll-to-topnav.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script>
+		function kirim_pengaduan() {
+			var form = document.getElementById("FormPengaduan")
+			var allValid = true
+			input = form.getElementsByClassName("form-control");
+			message = form.getElementsByClassName("invalid-feedback");
+			console.log(input.length)
+			console.log(message)
+			for ( var i = 0; i < input.length; i++) {
+				if (!input[i].checkValidity()) {
+					message[i].innerHTML = input[i].validationMessage
+					input[i].focus()
+					allValid = false;
+					console.log(allValid)
+					console.log(input[i].validationMessage)
+				}
+			}
+			form.classList.add('was-validated')
+			if (allValid == true) {
+				Swal.fire({
+					title: 'Apakah data yang Anda masukkan sudah benar ?',
+					text: "Setelah dikirim anda tidak bisa merubah dan menghapusnya",
+					icon: 'warning', 
+					showCancelButton: true,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+					confirmButtonText: 'Saya Yakin, Kirim!'
+				}).then((result) => {
+					if (result.isConfirmed) {
+						$.ajax({
+							type: "POST",
+							url: "http://localhost",
+							data: $("FormPengaduan").serialize(),
+							success: function (data) {
+								Swal.fire(
+									'Terkirim!',
+									'Pengaduan Anda akan diproses lebih lanjut.',
+									'success'
+									)
+							},
+							error: function (err) {
+								Swal.fire(
+									'Error !',
+									'Data gagal dikirim.',
+									'error'
+									)
+							}
+						});
+					}
+				})
+			}
+		}
+	</script>
+</body>
+</html>
