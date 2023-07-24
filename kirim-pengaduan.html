@@ -124,6 +124,7 @@
 						<div class="mb-3 has-validation">
 							<label for="evidence" class="form-label">Lampiran *</label>
 							<input name="evidence" class="form-control" type="file" id="evidence" multiple required>
+							<div class="invalid-feedback"></div>
 						</div>
 						<div class="alert alert-warning">
 							<h6>CATATAN:</h6>
@@ -157,7 +158,6 @@
 						<a href="" class="text-white m-2"><i class="bi bi-twitter"></i></a>
 						<a href="" class="text-white m-2"><i class="bi bi-instagram"></i></a>
 					</div>
-					
 				</div>
 			</div>
 		</div>
@@ -169,22 +169,18 @@
 	<script>
 		function kirim_pengaduan() {
 			var form = document.getElementById("FormPengaduan")
-			var allValid = true
-			input = form.getElementsByClassName("form-control");
-			message = form.getElementsByClassName("invalid-feedback");
-			console.log(input.length)
-			console.log(message)
+			var allIsValid = true
+			var input = form.getElementsByClassName("form-control");
+			var message = form.getElementsByClassName("invalid-feedback");
 			for ( var i = 0; i < input.length; i++) {
 				if (!input[i].checkValidity()) {
 					message[i].innerHTML = input[i].validationMessage
 					input[i].focus()
-					allValid = false;
-					console.log(allValid)
-					console.log(input[i].validationMessage)
+					allIsValid = false;
 				}
 			}
 			form.classList.add('was-validated')
-			if (allValid == true) {
+			if (allIsValid == true) {
 				Swal.fire({
 					title: 'Apakah data yang Anda masukkan sudah benar ?',
 					text: "Setelah dikirim anda tidak bisa merubah dan menghapusnya",
