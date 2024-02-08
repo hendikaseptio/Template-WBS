@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WHISTLEBLOWING SYSTEM</title>
+	<link rel="stylesheet" href="assets/css/bootstrap-custom.css">
+	<link rel="stylesheet" href="assets/css/theme.css">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+	<!-- icons -->
+	<link rel="stylesheet" href="assets/vendors/uicons-thin-straight/css/uicons-thin-straight.css">
+	<link rel="stylesheet" href="assets/vendors/icons-1.10.5/font/bootstrap-icons.min.css">
+</head>
+<body>
+	<header class="" id="navbar_top">
+		<nav class="navbar navbar-expand-lg bg-white">
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/logo/logo-wbs.png" alt="logo" width="40px"><b class="text-dark ms-2">WBS</b></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">BERANDA</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								PENGADUAN
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="kirim-pengaduan.html">KIRIM PENGADUAN</a></li>
+								<li><a class="dropdown-item" href="pantau-pengaduan.html">PANTAU PENGADUAN</a></li>
+								<li><a class="dropdown-item active" href="grafik-pengaduan.html">GRAFIK PENGADUAN</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="tentang.html">TENTANG WBS</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								BANTUAN
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="alur-pengaduan.html">ALUR PENGADUAN</a></li>
+								<li><a class="dropdown-item" href="cara-pengaduan.html">CARA MENGAJUKAN PENGADUAN</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+								<li><a class="dropdown-item" href="kontak.html">HUBUNGI KAMI</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="btn btn-outline-danger" href="login.html">LOGIN</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="container">
+			<h1 class="d-1 text-center">GRAFIK PENGADUAN</h1>
+			<p class="text-secondary text-center">
+				Berikut ini adalah grafik penanganan pengaduan melalui aplikasi WBS DPMPTSP
+			</p>
+		</div>
+	</section>
+	<section class="pt-5">
+		<div class="container">
+			<div class="alert alert-info mb-5">
+				<h4 class="alert-heading"><i class="bi bi-info-circle"></i> Silahkan baca informasi berikut terlebih dahulu !</h4>
+				<p>Pengaduan yang masuk melalui aplikasi WBS internal DPMPTSP akan ditindak lanjuti selambat-lambatnya 7 (tujuh) hari kerja terhitung sejak pengaduan diterima. Terdapat 4 (empat) kategori dalam penanganan pengaduan melalui WBS internal DPMPTSP yaitu: </p>
+				<ul>
+					<li><b>Pengaduan Diterima</b> yaitu pengaduan yang memenuhi syarat sesuai dengan ketentuan yang telah ditetapkan dalam aplikasi WBS Internal DPMPTSP.</li>
+					<li><b>Pengaduan Ditolak</b> yaitu pengaduan yang <span class="text-danger">tidak memenuhi syarat</span> yang telah ditetapkan dalam aplikasi WBS Internal DPMPTSP.</li>
+					<li><b>Pengaduan Diproses</b> yaitu pengaduan yang memenuhi syarat dan mendapat respon dari verifikator administrator WBS internal DPMPTSP dimana pengaduan siap untuk diproses (ditindak lanjuti).</li>
+					<li><b>Pengaduan Selesai</b> yaitu pengaduan yang telah selesai diproses.</li>
+				</ul>
+			</div>
+			<figure class="highcharts-figure">
+				<div id="mychart"></div>
+			</figure>
+			<div class="row py-5">
+				<div class="col-md-6 py-3">
+					<div class="card">
+						<div class="card-body">
+							<div id="grafik1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 py-3">
+					<div class="card">
+						<div class="card-body">
+							<div id="grafik2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="bg-dark text-white pb-3">
+		<div class="container">
+			<div class="col-md-6">
+                <img src="assets/img/logo/logo-wbs.png" alt="" width="100px" class="mb-3">
+				<h4 class="mb-5"><span class="text-danger">WHISTLEBLOWING</span> SYSTEM</h4>
+				<p>Bersama Whistleblowing System, Berani Lapor, Tangguh Melawan!<br>
+					<small>Jl.Raya dusun 1 Desa Kandang, Kecamatan Comal, Kabupaten Pemalang, Jawa Tengah</small>
+				</p>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<small class="text-secondary">Hak cipta © 2023 Hendika Septio - All Rights Reserved</small>
+				</div>
+				<div class="col-md-6">
+					<div class="d-flex justify-content-md-end">
+						<a href="" class="text-white m-2"><i class="bi bi-facebook"></i></a>
+						<a href="" class="text-white m-2"><i class="bi bi-youtube"></i></a>
+						<a href="" class="text-white m-2"><i class="bi bi-twitter"></i></a>
+						<a href="" class="text-white m-2"><i class="bi bi-instagram"></i></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/scroll-to-topnav.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets/js/highcharts.js"></script>
+	<script>
+		Highcharts.chart('grafik1', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			title: {
+				text: 'Grafik Proses Pengaduan',
+				align: 'center'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+					}
+				}
+			},
+			series: [{
+				name: 'Brands',
+				colorByPoint: true,
+				data: [
+											{
+							name: 'baru',
+							y: 12,
+							sliced: true,
+							selected: true
+						},
+											{
+							name: 'diproses',
+							y: 2,
+							sliced: true,
+							selected: true
+						},
+											{
+							name: 'selesai',
+							y: 2,
+							sliced: true,
+							selected: true
+						},
+									]
+			}]
+		});
+		Highcharts.chart('grafik2', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			title: {
+				text: 'Grafik Pengaduan Berdasarkan Kasus',
+				align: 'center'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+					}
+				}
+			},
+			series: [{
+				name: 'Brands',
+				colorByPoint: true,
+				data: [
+											{
+							name: 'Gratifikasi',
+							y: 1,
+							sliced: true,
+							selected: true
+						},
+											{
+							name: 'Penyimpangan dari tugas dan fungsi',
+							y: 15,
+							sliced: true,
+							selected: true
+						},
+									]
+			}]
+		});
+	</script>
+</body>
+</html>

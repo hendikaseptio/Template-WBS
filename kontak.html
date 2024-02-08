@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHISTLEBLOWING SYSTEM</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="assets/vendors/uicons-thin-straight/css/uicons-thin-straight.css">
+    <link rel="stylesheet" href="assets/vendors/icons-1.10.5/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="" id="navbar_top">
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/logo/logo-wbs.png"
+                        alt="logo" width="40px"><b class="text-dark ms-2">WBS</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">BERANDA</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                PENGADUAN
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="kirim-pengaduan.html">KIRIM PENGADUAN</a></li>
+                                <li><a class="dropdown-item" href="pantau-pengaduan.html">PANTAU PENGADUAN</a></li>
+                                <li><a class="dropdown-item" href="grafik-pengaduan.html">GRAFIK PENGADUAN</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="tentang.html">TENTANG WBS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                BANTUAN
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="alur-pengaduan.html">ALUR PENGADUAN</a></li>
+                                <li><a class="dropdown-item" href="cara-pengaduan.html">CARA MENGAJUKAN
+                                        PENGADUAN</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+                                <li><a class="dropdown-item active" href="kontak.html">HUBUNGI KAMI</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-danger" href="login.html">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4>Silahkan Anda membaca informasi berikut terlebih dahulu :</h4>
+                    <ul>
+                        <li>Fitur ini digunakan hanya untuk menanyakan sesuatu yang berhubungan dengan aplikasi WBS.</li>
+                        <li>Sebelum mengisi formulir <b>"hubungi kami"</b> pastikan Anda telah membaca informasi-informasi yang telah disampaikan.</li>
+                        <li>Pastikan data/informasi yang diinput pada formulir <b>"hubungi kami"</b> dapat dimengerti.</li>
+                        <li>Jawaban atas pertanyaan Anda akan direspon melalui email.</li>
+                    </ul>
+                    <hr>
+                    <form action="mailto:hendikaseptio11@gmail.com" method="post" enctype="text/plain">
+                    <input type="hidden" name="csrf" value="ed5a1e2ee524767a3588a09e29110eab" />
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Nama Lengkap">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Email aktif dan valid">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Detail Pesan" class="form-label">Detail</label>
+                            <textarea name="comment" id="pesan" cols="30" rows="10" class="form-control" placeholder="Jelaskan kendala yang Anda hadapi"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Kirim</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white pb-3">
+        <div class="container">
+            <div class="col-md-6">
+                <img src="assets/img/logo/logo-wbs.png" alt="" width="100px" class="mb-3">
+                <h4 class="mb-5"><span class="text-danger">WHISTLEBLOWING</span> SYSTEM</h4>
+                <p>Bersama Whistleblowing System, Berani Lapor, Tangguh Melawan!<br>
+                    <small>Jl.Raya dusun 1 Desa Kandang, Kecamatan Comal, Kabupaten Pemalang, Jawa Tengah</small>
+                </p>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <small class="text-secondary">Hak cipta © 2023 Hendika Septio - All Rights Reserved</small>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-md-end">
+                        <a href="#" class="text-white m-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white m-2"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white m-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white m-2"><i class="bi bi-instagram"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/scroll-to-topnav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</body>
+</html>
